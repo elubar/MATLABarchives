@@ -1,0 +1,8 @@
+%Quadratic formula
+%Define variables:
+a=2;b=-10;c=12;
+%Define realtionship:
+x = (-b+(sqrt(b.^2-(4*a*c))))/(2*a);
+%Display Answer:
+disp(['x=', num2str(x)])
+%Fin, should return x=3
