@@ -1,3 +1,15 @@
+%PART A:
+
 a = input('Inital temperature in Celsius:');
 b = ((9/5)*a)+32;
 disp(['Converted Temperature in Farenheit:', num2str(b)])
+
+
+%PART B:
+I = 20:1:30;
+Final = ((9/5)*I)+32;
+disp(['   celsius   fahrenheit'])
+disp ([I' Final'])
+
+%Or you could do...
+%table = [I', Final']
