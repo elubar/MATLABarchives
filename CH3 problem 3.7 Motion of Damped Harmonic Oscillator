@@ -1,0 +1,26 @@
+%This is code for Chapter 3 problem 3.7 of The essential MATLAB by Hahn and Valentine
+%Here we examine the motion of a damped harmonic ocisllator
+
+%Set all contants and variable ranges~~~~~~~~~~~~~
+
+R = 0:.05:2; %Damping coefficient
+t = 0:.25:10; %Intervals of time
+k = 1; %Spring coefficient
+r = R/2; %for convenience
+
+%Define relationships~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%Square of the natural frequency of UNdamped oscialltion
+k=(OmegaNot)^2;
+
+%Square of the natural frequency of DAMPED oscialltion
+Omega = (((OmegaNot)^.5)-((R.^2)/4)).^(.5); ;
+
+%Small amplitude of oscillation of a unit mass attached to a spring is
+%given by:
+A1 = (exp(-(r.*t)));
+A2 = sin(Omega.*t);
+AF = A1.*A2;
+
+%Plot~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+plot(t, AF)
