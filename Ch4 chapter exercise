@@ -1,0 +1,20 @@
+x = -1:.001:1;
+
+%Exprpessions to be evaluated
+
+y1 = acos(x);
+y2 = asin(x);
+y3 = atan(x);
+
+%Convert radians to degrees
+
+y1 = 180*y1/pi
+y2 = 180*y2/pi
+y3 = 180*y3/pi
+
+%Graph things
+
+plot(y1,x,y2,x,y3,x),grid
+legend('asin(x)', 'acos(x)', 'atan(x)')
+xlabel('\theta in degrees')
+ylabel('x')
