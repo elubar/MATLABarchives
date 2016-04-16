@@ -1,0 +1,26 @@
+%This is the code for problem 4.1 in Chapter 4 of MATLAB Essentails 
+%by Hahn and Valentine
+
+%Input Values:
+
+A = input('length of side A:');
+B = input('length of side B:');
+
+%Find Hypotenuse:
+C = sqrt(A^2 + B^2);
+
+%Display asnwer:
+disp('the square root of A^2+B^2 ='), disp(C)
+
+
+%Input values for second equation:
+A = input('length of side A:');
+B = input('length of side B:');
+Theta = input('angle between A,B in degrees:');
+
+%Find Hypotenuse:
+D = sqrt(A^2 + B^2 - 2*A*B*cos(Theta));
+
+%Display answer:
+disp('Using our given angle, the length is:'), disp(D)
+
