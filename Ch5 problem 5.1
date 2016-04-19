@@ -14,4 +14,25 @@
 
 %Part c) What does MATLAB return when you enter:
 0 < -2|0
-%This returns ?????????
+%This returns 0 (False). 0 is not less than -2, so this statement is false. since 0 is also not less than 0, the entire statement is false. 
+%Had there been a postitive integer, the whole statement would have returned true (since it's 'or', it only takes one option to be true for a return statement of 1
+
+%Part d) What does MATLAB return when you enter:
+~[1 0 2] * 3 
+%This statement returns 0 3 0 becuase the '~' symbole does the opposite of the original statement (still not sure why the opposite of 0*3 is 0 though...
+        [1 0 2] *3 %returns 3 0 6
+
+%Part e) What does MATLAB return when you enter:
+0 <= 0.2 <= 0.4
+%This statement returns false becasue 0 <= 0.2 returns a 1, and 1 is not <= 0.4
+
+%Part f) What does MATLAB return when you enter:
+5>4>3
+% This returns false because while 5>4, this returns a 1, and 1 is not less than 3
+
+%Part g) What does MATLAB return when you enter:
+2>3&1
+%2>3 is false, and this returns a 0. The statement 0&1 then, is also false (it's a zero and a nonzero, which returns a false)
+
+
+        
