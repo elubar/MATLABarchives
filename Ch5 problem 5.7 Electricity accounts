@@ -1,0 +1,15 @@
+%This is the solution code for problem 5.7 in Essential MATLAB by Hahn and Valentine
+%Suggested inputs are: 200,500,700, 1000, 1500
+%Outputs should be: 9,15,25,40,90 respectively 
+
+x = input('how many units used:')
+
+if x <= 500
+    y = .02*x + 5
+elseif (500 < x) & (x<= 1000)
+    y = (.05*(x-500)) + 15
+else 
+    y = (.1*(x-1000)) +40
+
+end
+display ('y')
