@@ -1,0 +1,38 @@
+%This is solution code for problem 6.1 in Chapter 6 of Hahn and Valentine's
+%MATLAB Essentials
+
+%The problem requires the user to make a 3x3 matrix 
+
+a = [1 2 3; 4 5 6; 7 8 9]
+
+        % Part A) Interchange Columns 2 and 3
+
+b = a([4:6]); %Saves column 2 under b
+c = a([7:9]); %Saves column 3 under c
+
+a(:,[2]) = c; %Replaces column 2 with column 3's content (which is saved under c)
+a(:,[3]) = b; %Replaces column 3 with column 2's content (which is saved under b)
+
+disp('final a='), disp(a) %Prints out the new matrix
+
+        %Part B) Add a fourth column of 0's
+
+a(:,4) = 0 %makes all values in a 4th column 0's
+
+        %Part C) Insert a row of 1s as the new second row of a (ie move the second and third rows down)
+
+b = [1;1;1] %Creates the new column
+
+c = [a(:,1:3) b a(:,4:end)] %Inserts the new column after the 3rd column
+
+% generalized: c = [a(:,1:N) b a(:,N+1:end)] ---->where N is insert b after the Nth column
+
+        %Part D) Remove the second column
+
+a(4) = []; %Deletes 1st element in column 2
+a(5) = []; %Deletes 2nd element in column 2
+a(6) = []; %Deletes 3rd element in column 2
+
+b = [0 0; 0 0; 0 0;] %Creates new matrix with two columns
+
+b(:) = a %Reformats a into b's shape
