@@ -1,0 +1,15 @@
+%Input info
+x = 3;
+n = 1;
+r = 1;
+C = [1] %C will be an array of each term of the Taylor series
+
+while r > 1e-6
+    r = ((x^n)/factorial(n))
+    C(n+1) = r 
+    n = n + 1
+end
+
+disp(sum(C)) %should display 20.0855 (e^(x=3))
+
+
