@@ -1,28 +1,16 @@
-%NOTE: this is what I have so far. The code is not working and I am still trouble shooting...
-
 %This is solution code for probelm 8.14 in MATLAB Essentails by Hahn and
 %Valentine (fifith edition). Ch8 is about practicing while loops
 
 %Parameters:
-
-V = 9;
 R = 4;
 C = 1;
+V = 9;
+t = 0;
 Q = 0;
-t = 0:.1:10;
+n = 1;
 
-%Create loop based on conditions/statements:
-
-
-while Q <= 8
-    disp('smaller...')
+while Q < 8
     Q = C*V*(1-exp(-t./R*C));
+    t = t + .1;
     disp(Q)
-%    disp('t')
-%    if Q < 8.2
-%        disp('Bigger!!')
-%    end
 end
-
-
-disp('done!'), disp (Q)
