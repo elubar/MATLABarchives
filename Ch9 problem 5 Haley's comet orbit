@@ -1,4 +1,4 @@
-%Hahn problem 9.5
+%This is solution code for problem 5 in chapter 9 of Hahn and Valentine's MATLAB Essentials (5th edition)
 
 %Initial values:
 e = .97627;
