@@ -1,0 +1,18 @@
+%This is solution code for probelm 9.5 in MATLAB Essentails by Hahn and
+%Valentine (fifith edition)
+
+%Inital values
+x = 0:300;
+y = 0:300;
+n = 0;
+
+while n <150
+    xk = x+1
+    yk = y+1
+    xk = (yk).*(1+sin(.7.*xk))-1.2.*sqrt(abs(xk))
+    yk = .21-xk
+    n = n + 1
+    
+    plot(xk,yk)
+end    
+    
