@@ -1,0 +1,23 @@
+%Hahn problem 9.5
+
+%Initial values:
+e = .97627;
+a = 1.49e11;
+theta = 0:pi/160:2*pi;
+
+%Funtion dictation circular path
+r = (a*(1-exp(2)))./(1-(e*cos(theta)));
+
+
+%Convert to cartesian
+x = r.*cos(theta);
+y = r.*sin(theta);
+
+%Print tables if you want to see input values in an organized way
+table = [r' theta'];
+table = [x' y'];
+
+%polar(theta, r)
+plot(y, x)
+
+
