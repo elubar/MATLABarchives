@@ -1,0 +1,12 @@
+%This is solution code to problem 9.4 of MATLAB Essentials by Valentine of Hahn 
+
+n = 1:1000; %number of points
+
+d = 137.51; %constant angle of divergence
+
+th = pi*d.*n./180; %angle theta 
+
+r = sqrt(n); %The function describes 
+
+plot(r.*cos(th), r.*sin(th), 'o') %Plot of sunflower seeds
+
