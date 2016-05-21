@@ -1,0 +1,66 @@
+%
+% Code written off of DTV's code in Chapter 12 p 273 of MATLAB Essentials
+% Free Fall analysis for three different cases:
+%       1. Without friction
+%       2. With Linear friction
+%       3. With Quadratic friction
+%
+clear all, close all, clc
+%
+%Specify constants:
+%
+k = .2; %coefficient of friction providid by problem
+g = 9.8; %acceleration due to gravity on Earth in M/s/s
+%
+dt = .01; %time steps for computation 
+%
+%Other initial conditions:
+%
+t(1) = 0.; v(1) = 0.; y(1) = 0.;
+t = 0:dt:5;
+%
+%For each case, compute exact solutions
+%
+%Case 1:
+v = g*t;
+y = g*t.^2*.5;
+%
+%Case 2:
+vLin = (g/k)*(1.-exp(-k*t));
+yLin = (g/k)*t-(g/(k^2))*(1.-exp(-k*t));
+%Case 3:
+vQuad = sqrt(g/k)*tanh(sqrt(g/k)*t);
+yQuad = (1/k)*log(cosh(sqrt(g*k)*t));
+%
+%Compute terminal speeds:
+vLinT = (g/k);
+vQuadT = sqrt(g/k);
+%
+%Graphical comparison:
+plot(t, y, t, yLin, t, yQuad)
+title('Fig1 comparison of results')
+xlabel('time')
+ylabel('distance')
+figure
+plot(t, v,t, vLin, t, vQuad)
+title('Fig1 comparison of results')
+xlabel('time')
+ylabel('speed')
+%
+%Comparison of distance and speed at t=5
+%
+disp('  ');
+fprintf('y(t) = %f, yLin(t) = %f, yQuad(t) = %f, at t=%f\n',...
+    y(501), yLin(501), yQuad(501), t(501))
+disp('  ');
+fprintf('v(t) = %f, vLin(t) = %f, vQuad(t) = %f, at t=%f\n',...
+    v(501), vLin(501), vQuad(501), t(501))
+%
+%Compare terminal velocity
+fprintf('   vLinT=%f, vWuadT = %f\n',...
+    vLinT, vQuadT)
+%
+%Fin
+%
+
+
