@@ -7,6 +7,3 @@ for k = 1:600
     y(k+1) = r*y(k)*(1-y(k))
 end
 plot(y, '.r')
-
-%I'm still not getting any kind of fractle plot
- 
